@@ -3,6 +3,7 @@ heading.textContent = "Ajax re do";
 document.querySelector("button").addEventListener("click", getUserData);
 document.querySelector(".button2").addEventListener("click",getUserData2);
 document.querySelector(".saveButton").addEventListener("click",saveData);
+document.querySelector(".getJokes").addEventListener("click",getJokes);
 // myTextBox = document.querySelector(".1")
 // myTextBox.value;
 //this is hardcoaded JS for XMLHttpRequest
@@ -63,3 +64,72 @@ function saveData(){
         }
     })
 }
+
+// We start promises
+function getJokes() {}
+//     alert("till here");
+//     let url= "https://api.chucknorris.io/jokes/random";
+//     $.get(url,(joke1)=>{
+//         $.get(url,(joke2)=>{
+//             $.get(url,(joke3)=>{
+//                 $.get(url,(joke4)=>{
+//                     $.get(url,(joke5)=>{
+//                         let jokeArray = [joke1.value, joke2.value, joke3.value,joke4.value,joke5.value];
+//                         console.log(jokeArray);
+        
+//                     });
+//                 });
+//             });
+//         }); 
+//     });
+// }
+
+//above is call back hell
+//answer to call back hell is Promise
+
+//lets create our first promise
+
+let x = 2;
+//let y = 5;
+let y = "test";
+let calculation = new Promise((resolve,reject)=>{
+    let answer = x + y;
+
+    if(isNaN(answer)){
+        reject("input needs to be a number");
+    }
+
+    resolve(answer);
+
+});
+
+calculation
+    .then(data =>{
+        console.log(data);
+    })
+    .catch(error =>{
+        console.log(error);
+    });
+
+    console.log(1);
+
+    //write a promise that take two arguments x and y and returns a promise.
+    function adder(x,y){
+        return new Promise((resolve,reject)=>{
+            let answer = x+y;
+            if(isNaN(answer)){
+                reject("input needs to be a number");
+            }
+            resolve(answer);
+        })
+    }
+
+    adder(6,5)
+    .then(data =>{
+        console.log(data);
+    })
+    .catch(error =>{
+        console.log(error);
+    });
+
+    console.log(10);
