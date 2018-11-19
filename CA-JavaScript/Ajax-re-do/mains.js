@@ -2,6 +2,9 @@ heading = document.querySelector(".heading");
 heading.textContent = "Ajax re do";
 document.querySelector("button").addEventListener("click", getUserData);
 document.querySelector(".button2").addEventListener("click",getUserData2);
+document.querySelector(".saveButton").addEventListener("click",saveData);
+// myTextBox = document.querySelector(".1")
+// myTextBox.value;
 //this is hardcoaded JS for XMLHttpRequest
 function getUserData() {
     console.log("starting our request");
@@ -27,9 +30,36 @@ function getUserData() {
     
 }
 //we will now use Jquery thrid party request to abstract the above code.
-
+//still it makes xhr request. and provides data in different format
 function getUserData2(){
     alert("show data");
+    //we use ajax method of jquery
+    $.ajax({
+        url: "http://localhost:3000/students.json",
+        type: "GET",
+        success: (data) =>{
+            console.log(data);
+        },
+        error: (error) => {
+            console.log("Error");
+            console.log(error);
+        }
+    })
 }
 
 
+function saveData(){
+
+    $.ajax({
+        url: "http://localhost:3000/students.json",
+        type: "POST",
+        data: {student:{name:"Santosh", location:"Brisbane"}},
+        success: (data) =>{
+            console.log(data);
+        },
+        error: (error) => {
+            console.log("Error");
+            console.log(error);
+        }
+    })
+}
