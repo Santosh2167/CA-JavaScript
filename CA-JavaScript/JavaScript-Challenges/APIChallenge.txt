@@ -1,0 +1,1 @@
+Create an html landing page that uses JavaScript to receive data from an API and populate the DOM (screen) with it. Have at least 1 user interaction on the page (event listener) that changes the DOM in some way.

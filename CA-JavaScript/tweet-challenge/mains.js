@@ -175,6 +175,7 @@ of the x, y, z properties of the passed object.
 
 
 // Assign Values to the a,b,c variable us
+//use the rest operator and rest operator to get a, b 
 
 var a,b,c;
 arrayTemp = [1,2,3,4,5,6];

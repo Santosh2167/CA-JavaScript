@@ -1,0 +1,18 @@
+<h1>Contacts</h1>
+
+{{#each contacts}}
+    Ugly Id: {{_id}}<br>
+    Enquiry By: {{name}}<br>
+    Email: {{email}}<br>
+    Enquiry Detail: {{enquiry}}<br>
+    <button class="moreInfo">More Info</button>
+
+    <form action="/deleteEnquiry/{{_id}}" method="delete">
+        <button class="{{deleteEnquiry}}">Delete Enquiry</button>
+    </form>
+        
+    <br><br>
+
+
+{{/each}}
+

@@ -84,39 +84,39 @@ let moviesInWatchlist = movies.filter (item => {
 //return the object 
 //sorting 
 
-let ratedMoviesList = moviesInWatchlist.map(movie =>{
-    return {
-        title: movie.title,
-        rating: movie.watchlist.reduce((accu,userId)=> {
-            if(friendList.indexOf(userId)>=0) {
-                accu +=1;
-            }
-            return accu;
-        },0)
-    };
-});
+// let ratedMoviesList = moviesInWatchlist.map(movie =>{
+//     return {
+//         title: movie.title,
+//         rating: movie.watchlist.reduce((accu,userId)=> {
+//             if(friendList.indexOf(userId)>=0) {
+//                 accu +=1;
+//             }
+//             return accu;
+//         },0)
+//     };
+// });
 
 
 
-console.log(ratedMoviesList);
+// console.log(ratedMoviesList);
 
-let alpha = ratedMoviesList.sort((a,b) =>{
-    if(a.title < b.title) {
-        return -1;
-    }else if (a.title > b.title){
-        return 1;
-    } else {
-        return 0;
-    }
-});
+// let alpha = ratedMoviesList.sort((a,b) =>{
+//     if(a.title < b.title) {
+//         return -1;
+//     }else if (a.title > b.title){
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
 
-console.log(alpha);
+// console.log(alpha);
 
-let score = alpha.sort((a,b)=>{
-    return b.rating - a.rating;
-});
+// let score = alpha.sort((a,b)=>{
+//     return b.rating - a.rating;
+// });
 
-console.log(score);
+// console.log(score);
 
 //  let tempUserDetail = users.filter(item => {
 //      return item.userId ===parseInt(userID);

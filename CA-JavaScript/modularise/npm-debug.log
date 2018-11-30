@@ -1,0 +1,189 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '@babel/core',
+1 verbose cli   '@bable/preset-env',
+1 verbose cli   'bable-loader',
+1 verbose cli   '--save-dev' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose config Skipping project config: /home/santosh/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData @babel/core
+9 silly fetchPackageMetaData @bable/preset-env
+10 silly fetchPackageMetaData bable-loader
+11 silly fetchNamedPackageData @babel/core
+12 silly mapToRegistry name @babel/core
+13 silly mapToRegistry scope (from package name) @babel
+14 verbose mapToRegistry no registry URL found in name for scope @babel
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/@babel%2fcore
+18 silly fetchNamedPackageData @bable/preset-env
+19 silly mapToRegistry name @bable/preset-env
+20 silly mapToRegistry scope (from package name) @bable
+21 verbose mapToRegistry no registry URL found in name for scope @bable
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/@bable%2fpreset-env
+25 silly fetchNamedPackageData bable-loader
+26 silly mapToRegistry name bable-loader
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry uri https://registry.npmjs.org/bable-loader
+30 verbose request uri https://registry.npmjs.org/@babel%2fcore
+31 verbose request no auth needed
+32 info attempt registry request try #1 at 3:13:42 pm
+33 verbose request id 8e35f7e51ab79176
+34 http request GET https://registry.npmjs.org/@babel%2fcore
+35 verbose request uri https://registry.npmjs.org/@bable%2fpreset-env
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 3:13:42 pm
+38 http request GET https://registry.npmjs.org/@bable%2fpreset-env
+39 verbose request uri https://registry.npmjs.org/bable-loader
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 3:13:42 pm
+42 verbose etag W/"9bdf1a4218a02cd611e5816298cc0d21"
+43 verbose lastModified Sat, 26 May 2018 18:02:06 GMT
+44 http request GET https://registry.npmjs.org/bable-loader
+45 http 200 https://registry.npmjs.org/@babel%2fcore
+46 verbose headers { date: 'Fri, 23 Nov 2018 04:13:42 GMT',
+46 verbose headers   'content-type': 'application/json',
+46 verbose headers   'transfer-encoding': 'chunked',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'set-cookie':
+46 verbose headers    [ '__cfduid=d3393d8665de1b9f5d2a1201725937f9f1542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+46 verbose headers   'cf-cache-status': 'HIT',
+46 verbose headers   'cache-control': 'public, max-age=300',
+46 verbose headers   'cf-ray': '47e0ce05ad8a19b0-SYD',
+46 verbose headers   etag: 'W/"8eb58be5489316101c4997db4f5d7522"',
+46 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+46 verbose headers   'last-modified': 'Tue, 13 Nov 2018 21:10:59 GMT',
+46 verbose headers   vary: 'Accept-Encoding',
+46 verbose headers   'x-amz-meta-rev': '75-76ce91855b211a8c1fb78a3442457ca2',
+46 verbose headers   server: 'cloudflare',
+46 verbose headers   'content-encoding': 'gzip' }
+47 silly get cb [ 200,
+47 silly get   { date: 'Fri, 23 Nov 2018 04:13:42 GMT',
+47 silly get     'content-type': 'application/json',
+47 silly get     'transfer-encoding': 'chunked',
+47 silly get     connection: 'keep-alive',
+47 silly get     'set-cookie':
+47 silly get      [ '__cfduid=d3393d8665de1b9f5d2a1201725937f9f1542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+47 silly get     'cf-cache-status': 'HIT',
+47 silly get     'cache-control': 'public, max-age=300',
+47 silly get     'cf-ray': '47e0ce05ad8a19b0-SYD',
+47 silly get     etag: 'W/"8eb58be5489316101c4997db4f5d7522"',
+47 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+47 silly get     'last-modified': 'Tue, 13 Nov 2018 21:10:59 GMT',
+47 silly get     vary: 'Accept-Encoding',
+47 silly get     'x-amz-meta-rev': '75-76ce91855b211a8c1fb78a3442457ca2',
+47 silly get     server: 'cloudflare',
+47 silly get     'content-encoding': 'gzip' } ]
+48 verbose get saving @babel/core to /home/santosh/.npm/registry.npmjs.org/_40babel_252fcore/.cache.json
+49 http 304 https://registry.npmjs.org/bable-loader
+50 verbose headers { date: 'Fri, 23 Nov 2018 04:13:42 GMT',
+50 verbose headers   connection: 'keep-alive',
+50 verbose headers   'set-cookie':
+50 verbose headers    [ '__cfduid=d1ae14f8995c17d97c31557147710ccc01542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+50 verbose headers   'cf-cache-status': 'HIT',
+50 verbose headers   'cache-control': 'max-age=300',
+50 verbose headers   'cf-ray': '47e0ce05bbd219ce-SYD',
+50 verbose headers   etag: '"9bdf1a4218a02cd611e5816298cc0d21"',
+50 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+50 verbose headers   'last-modified': 'Sat, 26 May 2018 18:02:06 GMT',
+50 verbose headers   vary: 'accept-encoding, accept',
+50 verbose headers   server: 'cloudflare' }
+51 silly get cb [ 304,
+51 silly get   { date: 'Fri, 23 Nov 2018 04:13:42 GMT',
+51 silly get     connection: 'keep-alive',
+51 silly get     'set-cookie':
+51 silly get      [ '__cfduid=d1ae14f8995c17d97c31557147710ccc01542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+51 silly get     'cf-cache-status': 'HIT',
+51 silly get     'cache-control': 'max-age=300',
+51 silly get     'cf-ray': '47e0ce05bbd219ce-SYD',
+51 silly get     etag: '"9bdf1a4218a02cd611e5816298cc0d21"',
+51 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+51 silly get     'last-modified': 'Sat, 26 May 2018 18:02:06 GMT',
+51 silly get     vary: 'accept-encoding, accept',
+51 silly get     server: 'cloudflare' } ]
+52 verbose etag https://registry.npmjs.org/bable-loader from cache
+53 verbose get saving bable-loader to /home/santosh/.npm/registry.npmjs.org/bable-loader/.cache.json
+54 http 404 https://registry.npmjs.org/@bable%2fpreset-env
+55 verbose headers { date: 'Fri, 23 Nov 2018 04:13:43 GMT',
+55 verbose headers   'content-type': 'application/json',
+55 verbose headers   'content-length': '21',
+55 verbose headers   connection: 'keep-alive',
+55 verbose headers   'set-cookie':
+55 verbose headers    [ '__cfduid=da267a436064ff42c2be78687f13fedbf1542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+55 verbose headers   'cf-ray': '47e0ce05bacf65e7-SYD',
+55 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+55 verbose headers   vary: 'Accept-Encoding',
+55 verbose headers   server: 'cloudflare' }
+56 silly get cb [ 404,
+56 silly get   { date: 'Fri, 23 Nov 2018 04:13:43 GMT',
+56 silly get     'content-type': 'application/json',
+56 silly get     'content-length': '21',
+56 silly get     connection: 'keep-alive',
+56 silly get     'set-cookie':
+56 silly get      [ '__cfduid=da267a436064ff42c2be78687f13fedbf1542946422; expires=Sat, 23-Nov-19 04:13:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+56 silly get     'cf-ray': '47e0ce05bacf65e7-SYD',
+56 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+56 silly get     vary: 'Accept-Encoding',
+56 silly get     server: 'cloudflare' } ]
+57 silly fetchPackageMetaData Error: Not found : @bable/preset-env
+57 silly fetchPackageMetaData     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+57 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+57 silly fetchPackageMetaData     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+57 silly fetchPackageMetaData     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+57 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+57 silly fetchPackageMetaData     at Request.emit (events.js:214:7)
+57 silly fetchPackageMetaData     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+57 silly fetchPackageMetaData     at emitOne (events.js:121:20)
+57 silly fetchPackageMetaData     at Request.emit (events.js:211:7)
+57 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+57 silly fetchPackageMetaData  error for @bable/preset-env { Error: Not found : @bable/preset-env
+57 silly fetchPackageMetaData     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+57 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+57 silly fetchPackageMetaData     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+57 silly fetchPackageMetaData     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+57 silly fetchPackageMetaData     at emitTwo (events.js:126:13)
+57 silly fetchPackageMetaData     at Request.emit (events.js:214:7)
+57 silly fetchPackageMetaData     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+57 silly fetchPackageMetaData     at emitOne (events.js:121:20)
+57 silly fetchPackageMetaData     at Request.emit (events.js:211:7)
+57 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12) pkgid: '@bable/preset-env', statusCode: 404, code: 'E404' }
+58 silly rollbackFailedOptional Starting
+59 silly rollbackFailedOptional Finishing
+60 silly runTopLevelLifecycles Starting
+61 silly runTopLevelLifecycles Finishing
+62 silly install printInstalled
+63 verbose stack Error: Not found : @bable/preset-env
+63 verbose stack     at makeError (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+63 verbose stack     at CachingRegistryClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+63 verbose stack     at Request._callback (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+63 verbose stack     at Request.self.callback (/usr/share/npm/node_modules/request/request.js:198:22)
+63 verbose stack     at emitTwo (events.js:126:13)
+63 verbose stack     at Request.emit (events.js:214:7)
+63 verbose stack     at Request.<anonymous> (/usr/share/npm/node_modules/request/request.js:1082:10)
+63 verbose stack     at emitOne (events.js:121:20)
+63 verbose stack     at Request.emit (events.js:211:7)
+63 verbose stack     at IncomingMessage.<anonymous> (/usr/share/npm/node_modules/request/request.js:1009:12)
+64 verbose statusCode 404
+65 verbose pkgid @bable/preset-env
+66 verbose cwd /home/santosh/Documents/CA-JavaScript/modularise
+67 error Linux 4.15.0-38-generic
+68 error argv "/usr/bin/node" "/usr/bin/npm" "install" "@babel/core" "@bable/preset-env" "bable-loader" "--save-dev"
+69 error node v8.10.0
+70 error npm  v3.5.2
+71 error code E404
+72 error 404 Not found : @bable/preset-env
+73 error 404
+74 error 404 '@bable/preset-env' is not in the npm registry.
+75 error 404 You should bug the author to publish it (or use the name yourself!)
+76 error 404 Note that you can also install from a
+77 error 404 tarball, folder, http url, or git url.
+78 verbose exit [ 1, true ]
