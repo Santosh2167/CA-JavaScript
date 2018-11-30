@@ -1,23 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const contacts=[];
+const ContactController = require("./controller/contact_controller");
 
-router.get("/",function(req,res){
-    res.render("form");
-});
+router.get("/",ContactController.newResource);
 
-router.post("/contacts",function(req,res){
+router.post("/contacts",ContactController.create);
 
-    let {name,email} = req.body;
-    contacts.push({name,email});
-    console.log(contacts);
-
-    res.render("success");
-
-});
-
-router.get("/contacts",function(req,res){
-    res.send(contacts);
-});
+router.get("/contacts",ContactController.index);
 
 module.exports = router;
