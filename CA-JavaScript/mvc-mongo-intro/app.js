@@ -1,13 +1,13 @@
 const express =require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
-const mongoose1 = require("mongoose");
+const mongoose = require("mongoose");
 const app = express();
 const port =3000;
 
-mongoose1.connect("mongodb://localhost/contact_app",{useNewUrlParser: true});
-mongoose1.Promise = global.Promise;
-mongoose1.connection.on("error",error => console.log(error));
+mongoose.connect("mongodb://localhost/contact_app",{useNewUrlParser: true});
+mongoose.Promise = global.Promise;
+mongoose.connection.on("error",error => console.log(error));
 
 app.engine("handlebars",exphbs({defaultLayouts:"main"}));
 app.set("view engine","handlebars");
