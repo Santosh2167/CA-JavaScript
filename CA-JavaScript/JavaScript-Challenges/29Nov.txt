@@ -1,0 +1,3 @@
+//Create an Express web server that is able to handle a full CRUD (create, read, update, delete) resource named Tweet
+//Track this resource inside of a MongoDB database
+//Do not add any html, this will be an API that only responds back in JSON
