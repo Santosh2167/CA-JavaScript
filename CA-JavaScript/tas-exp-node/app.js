@@ -17,14 +17,19 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 app.get("/",function(req,res){
+    res.render("form")
 
 });
 
 app.get("/contacts",function(req,res){
-    return res.json(contacts);
+    res.json(contacts);
 });
 
 app.post("/contacts",function(req,res){
+    res.json(req.body);
+    // res.send();
+    // let {name,email}=req.body;
+    // contacts.push({name,email});
 
 });
 
