@@ -26,10 +26,15 @@ app.get("/contacts",function(req,res){
 });
 
 app.post("/contacts",function(req,res){
-    res.json(req.body);
+    // res.json(req.body);
     // res.send();
     // let {name,email}=req.body;
     // contacts.push({name,email});
+
+    let {name,email} = req.body;
+    contacts.push({name,email});
+
+    res.render("success");
 
 });
 

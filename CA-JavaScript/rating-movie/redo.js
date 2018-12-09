@@ -34,7 +34,8 @@ let movies = [{
       "Ralph Fiennes",
       "Ben Kingsley"
     ],
-    "watchlist": [15291, 51417, 7001, 9250, 93707]
+    //"watchlist":[51417,9250]
+     "watchlist": [15291, 51417, 7001, 9250, 93707]
   }];
 
 let users = [{
@@ -58,27 +59,98 @@ let users = [{
         "friends": [15291, 7001]
  }];
 
-// alert("lets start");
+ let userId = 15291;//prompt("Please enter user ID. Options are 15291, 7001,51417,62289.");
 
-// let getUserId = prompt("Please enter User ID. Options are 15291, 7001,51417,62289");
-const getUserId = 7001;
-let friendList=[];
+ let tempArray = users.filter(item => {
+     return item.userId === parseInt(userId);
+ });
+
+ let friendList = tempArray[0].friends;
 
 
-users.forEach(item => {
-    if(item.userId === parseInt(getUserId)){
-        friendList = item.friends;
-    }
-});
+ let movieList = movies.filter(movie =>{
+     return friendList.some(fid => {
+      return movie.watchlist.indexOf(fid) >=0;
+     }); 
+ });
 
-let watchList = movies.filter(item => {
-    return friendList.some(fid => {
-        return item.watchlist.indexOf(fid) >= 0;
-    });
-});
+ let rateMovie = movieList.map(movieInMovieList => {
+     return {
+       title: movieInMovieList.title,
+       rating: friendList.reduce((accumulator,fid) => {
+        if (movieInMovieList.watchlist.indexOf(fid) >=0) {
+          accumulator += 1;
+        }
+        return accumulator;
+       },0)
+     }
+ });
+
+ let sortedAlpha = rateMovie.sort((a,b)=>{
+     if(a.title < b.title){
+       return -1;
+     } else if (a.title > b.title) {
+       return 1;
+
+     } else {
+       return 0;
+     }
+ });
+
+ let sortedNum = sortedAlpha.sort((a,b)=>{
+  return (b.rating - a.rating);
+ });
+ console.log(sortedAlpha);
+
+ //let userId =prompt("Please enter user id, Options are 15291, 7001,51417,62289");
+/****************** */
+//  let userId=62289;
+
+//  let tempArray = users.filter(item => {
+//       return item.userId === parseInt(userId);
+//  });
+
+//  let friendList = tempArray[0].friends;
+
+//  console.log("friendList"+ friendList);
+
+//  let watchList = movies.filter(movie =>{
+//     return friendList.some(fid=>{
+//       return movie.watchlist.indexOf(fid)>=0;
+//     });
+//  });
+
+//  let ratingMovie = watchList.map(item=>{
+//    return {
+//      movie: item.title,
+//      rating: item.watchlist.reduce((accumulator,userId)=>{
+//        if(friendList.indexOf(userId)>=0){
+//          accumulator +=1;
+//        }
+//        return accumulator;
+//      },0)
+//    }
+//  })
+
+//  console.log(ratingMovie);
+
+//  let movieList = movies.filter(movie =>{
+//      return friendList.some(fid=>{
+//        return movies.watchlist.indexOf(fid)>=1
+//      })
+//  });
+
+//  let movieList = movies.map(movie =>{
+//      return {
+//        movie: movie.title,
+
+//      } 
+//  });
+ 
+
 
 // console.log("here"+watchList);
-console.log("here", watchList);
+
 
 // let ratingMovie = movies.map(item =>{
 //      return {

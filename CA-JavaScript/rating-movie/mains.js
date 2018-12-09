@@ -71,12 +71,7 @@ let temUserData = users.filter(item =>{
 
 let friendList = temUserData[0].friends;
 
-let moviesInWatchlist = movies.filter (item => {
-    return friendList.some(fid =>{
-        return item.watchlist.indexOf(fid)>=0;
-    });
 
-});
 
 //map on movies 
 //check if there is any firends in friendlist
